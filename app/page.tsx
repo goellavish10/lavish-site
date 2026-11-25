@@ -24,7 +24,7 @@ export default function Home() {
       <SystemMap />
 
       <p className="now">
-        <span className="dot dot-ok" aria-hidden="true" /> Now: {nowPlaying ? `${nowPlaying} on the PS5, and ` : ""}training for a sub-60 10k in February.
+        <span className="dot dot-ok" aria-hidden="true" /> Now: {nowPlaying ? `playing ${nowPlaying}, and ` : ""}training for a sub-60 10k in February.
       </p>
     </main>
   );

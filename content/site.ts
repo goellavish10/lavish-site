@@ -11,8 +11,8 @@ export const games = [
   { title: "GTA VI", status: "Playing now", now: true, progress: null, cover: "/games/gta6.jpg" },
   { title: "Red Dead Redemption 2", status: "About halfway", progress: 0.5, cover: "/games/rdr2.jpg" },
   { title: "God of War", status: "Finished the series", progress: 1, note: "Ragnarök's father and son story got me.", cover: "/games/gowr.jpg" },
-  { title: "Spider-Man", status: "The PS5 games", progress: null, cover: "/games/msm2.jpg" },
-  { title: "Hogwarts Legacy", status: "Finished. My first PS5 story game.", progress: 1, cover: "/games/hogwarts.jpg" },
+  { title: "Spider-Man", status: "Played the series", progress: null, cover: "/games/msm2.jpg" },
+  { title: "Hogwarts Legacy", status: "Finished", progress: 1, cover: "/games/hogwarts.jpg" },
 ] as const;
 
 // Single source for "what I'm playing": the home map, the Now line and /play all read this.

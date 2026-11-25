@@ -7,7 +7,7 @@ import { games } from "@/content/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Games and Running",
-  description: "The PS5 story games I play, and my training for a first 10k under 60 minutes.",
+  description: "The story games I play, and my training for a first 10k under 60 minutes.",
   path: "/play",
 });
 
@@ -16,7 +16,7 @@ export default function Play() {
     <main id="main" className="page">
       <h1>
         Play
-        <span className="h1-sub">Story games on the PS5, a sub-60 10k in February, and cricket.</span>
+        <span className="h1-sub">Story games, a sub-60 10k in February, and cricket.</span>
       </h1>
 
       <section aria-labelledby="shelf-title">
@@ -46,10 +46,10 @@ export default function Play() {
       <div className="photos">
         <Photo name="run" alt="Out on a training run" sizes="(min-width: 46rem) 33vw, 100vw" />
         <Photo name="gym" alt="At the gym" sizes="(min-width: 46rem) 33vw, 100vw" />
-        <Photo name="setup" alt="My PS5 setup" sizes="(min-width: 46rem) 33vw, 100vw" />
+        <Photo name="setup" alt="My gaming setup" sizes="(min-width: 46rem) 33vw, 100vw" />
       </div>
 
-      <p className="muted credit">Cover art from the PlayStation Store, owned by each game&rsquo;s publisher.</p>
+      <p className="muted credit">Cover art belongs to each game&rsquo;s publisher.</p>
     </main>
   );
 }
