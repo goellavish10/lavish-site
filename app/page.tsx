@@ -20,7 +20,7 @@ export default function Home() {
         </div>
       </section>
 
-      <h2 className="visually-hidden">This site, drawn as a system</h2>
+      <h2 className="visually-hidden">Pages</h2>
       <SystemMap />
 
       <p className="now">

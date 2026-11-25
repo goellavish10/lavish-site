@@ -131,7 +131,7 @@ export function LimiterToy() {
 
       <ol className="limiter-log" aria-live="polite" aria-relevant="additions">
         {lines.length === 0 ? (
-          <li className="log-empty">Queue ten background jobs, then press &ldquo;Someone&rsquo;s waiting&rdquo;.</li>
+          <li className="log-empty">No requests yet.</li>
         ) : (
           lines.map((l) => (
             <li key={l.id} className={l.tone === "ok" ? "log-ok" : "log-limited"}>

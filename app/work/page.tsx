@@ -10,7 +10,7 @@ export default function Work() {
   return (
     <main id="main" className="page">
       <h1>Work</h1>
-      <p className="lede">Four problems from Letterdrop. Each one is a picture and three sentences.</p>
+      <p className="lede">Four problems I fixed at Letterdrop.</p>
 
       <ul className="cases">
         {cases.map((c) => (

@@ -356,7 +356,7 @@ export function SystemMap() {
         <p className="map-tally">
           {touched
             ? `${s.served} served, ${s.timedOut} timed out. Three slots, one request each every ${GAP_MS / 1000} s.`
-            : "Each dot is a request. Pick a page, or flood the limiter."}
+            : "Each dot is a request."}
         </p>
       </div>
     </div>
