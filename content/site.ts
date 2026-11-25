@@ -7,10 +7,21 @@ export const links = [
   { label: "Résumé", href: "https://tinyurl.com/resumelavish" },
 ];
 
+export const games = [
+  { title: "GTA VI", status: "Playing now", now: true, progress: null, cover: "/games/gta6.jpg" },
+  { title: "Red Dead Redemption 2", status: "About halfway", progress: 0.5, cover: "/games/rdr2.jpg" },
+  { title: "God of War", status: "Finished the series", progress: 1, note: "Ragnarök's father and son story got me.", cover: "/games/gowr.jpg" },
+  { title: "Spider-Man", status: "The PS5 games", progress: null, cover: "/games/msm2.jpg" },
+  { title: "Hogwarts Legacy", status: "Finished. My first PS5 story game.", progress: 1, cover: "/games/hogwarts.jpg" },
+] as const;
+
+// Single source for "what I'm playing": the home map, the Now line and /play all read this.
+export const nowPlaying = games.find((g) => "now" in g)?.title;
+
 export const nodes = [
   { href: "/work", name: "Work", stat: "−55% database spend" },
   { href: "/lab", name: "Lab", stat: "4 side tools" },
-  { href: "/play", name: "Play", stat: "RDR2 at 50%" },
+  { href: "/play", name: "Play", stat: nowPlaying ? `Playing ${nowPlaying}` : "Games and running" },
   { href: "/writing", name: "Writing", stat: "6 posts" },
   { href: "/hire", name: "Hire me", stat: "4 ways to work together" },
 ] as const;
@@ -117,13 +128,6 @@ export const projects = [
   },
 ] as const;
 
-export const games = [
-  { title: "GTA VI", status: "Playing now", progress: null, cover: "/games/gta6.jpg" },
-  { title: "Red Dead Redemption 2", status: "About halfway", progress: 0.5, cover: "/games/rdr2.jpg" },
-  { title: "God of War", status: "Finished the series", progress: 1, note: "Ragnarök's father and son story got me.", cover: "/games/gowr.jpg" },
-  { title: "Spider-Man", status: "The PS5 games", progress: null, cover: "/games/msm2.jpg" },
-  { title: "Hogwarts Legacy", status: "Finished. My first PS5 story game.", progress: 1, cover: "/games/hogwarts.jpg" },
-] as const;
 
 export const offers = [
   { icon: "gauge", title: "Backend and infra fixes", what: "Slow databases, flaky jobs, runaway cloud bills." },

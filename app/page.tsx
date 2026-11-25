@@ -1,6 +1,6 @@
 import { Photo } from "@/components/Photo";
 import { SystemMap } from "@/components/SystemMap";
-import { links } from "@/content/site";
+import { links, nowPlaying } from "@/content/site";
 
 export default function Home() {
   return (
@@ -24,8 +24,7 @@ export default function Home() {
       <SystemMap />
 
       <p className="now">
-        <span className="dot dot-ok" aria-hidden="true" /> Now: GTA VI on the PS5, and training for a sub-60 10k in
-        February.
+        <span className="dot dot-ok" aria-hidden="true" /> Now: {nowPlaying ? `${nowPlaying} on the PS5, and ` : ""}training for a sub-60 10k in February.
       </p>
     </main>
   );
