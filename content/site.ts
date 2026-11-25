@@ -29,7 +29,7 @@ export type Case = {
 export const cases: Case[] = [
   {
     slug: "rate-limiter",
-    title: "The shared rate limiter",
+    title: "Rewriting a shared Redis rate limiter",
     big: "1 in 10",
     bigLabel: "requests timed out under burst, before my rewrite",
     problem:
@@ -42,7 +42,7 @@ export const cases: Case[] = [
   },
   {
     slug: "database-spend",
-    title: "Halving the database bill",
+    title: "Cutting MongoDB spend by 55%",
     big: "−55%",
     bigLabel: "MongoDB spend",
     problem: "Slow queries every day, and a database bill that grew with the data.",
@@ -51,7 +51,7 @@ export const cases: Case[] = [
   },
   {
     slug: "nightly-spike",
-    title: "The 3 a.m. CPU spike",
+    title: "Fixing a nightly MongoDB CPU spike",
     big: "108% → 8%",
     bigLabel: "peak CPU, local benchmark of the fix",
     problem: "A read replica hit 83% CPU every night, a minute after a batch job started.",
@@ -61,7 +61,7 @@ export const cases: Case[] = [
   },
   {
     slug: "crash-safe-workers",
-    title: "Workers that survive a kill",
+    title: "Crash-safe job workers on Cloud Run",
     big: "Mid-stream",
     bigLabel: "where a killed worker picks back up",
     problem: "Long jobs ran on cloud instances that can be shut down at any moment. A kill meant starting over.",

@@ -9,15 +9,18 @@ import "./globals.css";
 const sans = Archivo({ subsets: ["latin"], axes: ["wdth"], variable: "--font-sans" });
 const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400"], variable: "--font-mono" });
 
-const description = "Full-stack engineer at Letterdrop. I make slow, flaky backends fast and boring.";
+const description =
+  "Lavish Goyal is a full-stack engineer at Letterdrop working on rate limiting, database performance, job queues and LLM agents.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: "Lavish Goyal", template: "%s | Lavish Goyal" },
+  title: { default: "Lavish Goyal | Backend and Full-Stack Engineer", template: "%s | Lavish Goyal" },
+  applicationName: "Lavish Goyal",
+  authors: [{ name: "Lavish Goyal" }],
+  alternates: { canonical: "/", types: { "text/markdown": "/llms.txt" } },
   description,
-  openGraph: { title: "Lavish Goyal", description, type: "website", url: "/" },
+  openGraph: { title: "Lavish Goyal | Backend and Full-Stack Engineer", description, type: "website", url: "/", siteName: "Lavish Goyal" },
   twitter: { card: "summary_large_image", creator: "@lavishG10" },
-  alternates: { types: { "text/markdown": "/llms.txt" } },
 };
 
 const person = {
@@ -26,6 +29,7 @@ const person = {
   name: "Lavish Goyal",
   jobTitle: "Full-stack engineer",
   worksFor: { "@type": "Organization", name: "Letterdrop" },
+  knowsAbout: ["Backend engineering", "Rate limiting", "MongoDB", "Redis", "Node.js", "Go", "LLM agents"],
   url: siteUrl,
   email: `mailto:${email}`,
   sameAs: links.filter((l) => l.label !== "Résumé").map((l) => l.href),

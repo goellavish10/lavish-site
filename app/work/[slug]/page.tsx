@@ -5,6 +5,7 @@ import { CaseArt } from "@/components/CaseArt";
 import { LimiterToy } from "@/components/LimiterToy";
 import { PlanTree } from "@/components/PlanTree";
 import { cases } from "@/content/site";
+import { pageMeta } from "@/lib/meta";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -17,7 +18,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const c = cases.find((x) => x.slug === slug);
-  return c ? { title: c.title, description: `${c.big} ${c.bigLabel}. ${c.result}` } : {};
+  return c ? pageMeta({ title: c.title, description: `${c.problem} ${c.result}`, path: `/work/${c.slug}` }) : {};
 }
 
 export default async function CasePage({ params }: Props) {

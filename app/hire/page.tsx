@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import { email, offers } from "@/content/site";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = { title: "Hire me" };
+export const metadata: Metadata = pageMeta({
+  title: "Hire a Backend and AI Engineer for Contract Work",
+  description:
+    "Contract help with slow databases, flaky jobs, cloud costs, LLM agents, MVP builds and integrations. Email Lavish Goyal.",
+  path: "/hire",
+});
 
 const icons: Record<string, React.ReactNode> = {
   gauge: <path d="M6,26 a14,14 0 1 1 28,0 M20,26 L28,14" />,
@@ -20,8 +26,10 @@ export default function Hire() {
   const body = encodeURIComponent("What's broken or what you want built:\n\nTimeline:\n\nBudget range:\n");
   return (
     <main id="main" className="page">
-      <h1>Hire me</h1>
-      <p className="lede">I take on a few contract projects alongside my job.</p>
+      <h1>
+        Hire me
+        <span className="h1-sub">Contract backend, infrastructure and AI agent work, taken on alongside my job.</span>
+      </h1>
 
       <ul className="offers">
         {offers.map((o) => (

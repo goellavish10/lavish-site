@@ -1,16 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMeta } from "@/lib/meta";
 import { CaseArt } from "@/components/CaseArt";
 import { cases, deletions, jobs } from "@/content/site";
 
-export const metadata: Metadata = { title: "Work" };
+export const metadata: Metadata = pageMeta({
+  title: "Work: Rate Limiting, Database Cost and Query Performance",
+  description:
+    "Four backend case studies: a Redis and Lua rate limiter rewrite, 55% lower MongoDB spend, a fixed nightly CPU spike, and crash-safe job workers.",
+  path: "/work",
+});
 
 export default function Work() {
   const total = deletions.reduce((n, d) => n + d.lines, 0);
   return (
     <main id="main" className="page">
-      <h1>Work</h1>
-      <p className="lede">Four problems I fixed at Letterdrop.</p>
+      <h1>
+        Work
+        <span className="h1-sub">Backend problems I fixed at Letterdrop: rate limits, database cost and slow queries.</span>
+      </h1>
 
       <ul className="cases">
         {cases.map((c) => (

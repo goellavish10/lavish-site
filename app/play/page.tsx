@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
 import { Photo } from "@/components/Photo";
+import { pageMeta } from "@/lib/meta";
 import Image from "next/image";
 import { TenK } from "@/components/TenK";
 import { games } from "@/content/site";
 
-export const metadata: Metadata = { title: "Play" };
+export const metadata: Metadata = pageMeta({
+  title: "Games and Running",
+  description: "The PS5 story games I play, and my training for a first 10k under 60 minutes.",
+  path: "/play",
+});
 
 export default function Play() {
   return (
     <main id="main" className="page">
-      <h1>Play</h1>
-      <p className="lede">Story games on the PS5, a 10k in February, and cricket.</p>
+      <h1>
+        Play
+        <span className="h1-sub">Story games on the PS5, a sub-60 10k in February, and cricket.</span>
+      </h1>
 
       <section aria-labelledby="shelf-title">
         <h2 id="shelf-title">The shelf</h2>

@@ -106,6 +106,18 @@ code {
   font-size: 0.9em;
 }
 
+.h1-sub {
+  display: block;
+  margin-top: 1rem;
+  max-width: 36ch;
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  font-weight: 400;
+  font-variation-settings: "wdth" 100;
+  letter-spacing: 0;
+  line-height: 1.4;
+  text-wrap: pretty;
+}
+
 .muted {
   color: var(--muted);
 }
@@ -1193,7 +1205,19 @@ code {
   text-decoration: underline;
 }
 
-.posts .muted {
+.posts .h1-sub {
+  display: block;
+  margin-top: 1rem;
+  max-width: 36ch;
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  font-weight: 400;
+  font-variation-settings: "wdth" 100;
+  letter-spacing: 0;
+  line-height: 1.4;
+  text-wrap: pretty;
+}
+
+.muted {
   white-space: nowrap;
   font-size: 0.92rem;
 }
