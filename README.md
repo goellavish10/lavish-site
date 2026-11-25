@@ -12,4 +12,5 @@ npm run dev
 - Posts are Markdown files in `content/posts/`, listed in `content/posts.json`.
 - Photos: drop `me`, `run`, `gym` or `setup` (`.jpg`/`.png`/`.webp`) into `public/photos/`. Missing ones are skipped at build time.
 - `/llms.txt` is generated from the same content, for agents.
+- The site URL comes from `SITE_HOST`, else Vercel's production URL (`lib/site-url.ts`).
 - `/api/ping` returns the serving region; the footer and the limiter on `/work/rate-limiter` call it.

@@ -3,6 +3,7 @@ import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { email, links } from "@/content/site";
+import { siteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 const sans = Archivo({ subsets: ["latin"], axes: ["wdth"], variable: "--font-sans" });
@@ -11,7 +12,7 @@ const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400"], variable: "--f
 const description = "Full-stack engineer at Letterdrop. I make slow, flaky backends fast and boring.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lavishgoyal.vercel.app"),
+  metadataBase: new URL(siteUrl),
   title: { default: "Lavish Goyal", template: "%s | Lavish Goyal" },
   description,
   openGraph: { title: "Lavish Goyal", description, type: "website", url: "/" },
@@ -25,7 +26,7 @@ const person = {
   name: "Lavish Goyal",
   jobTitle: "Full-stack engineer",
   worksFor: { "@type": "Organization", name: "Letterdrop" },
-  url: "https://lavishgoyal.vercel.app",
+  url: siteUrl,
   email: `mailto:${email}`,
   sameAs: links.filter((l) => l.label !== "Résumé").map((l) => l.href),
 };

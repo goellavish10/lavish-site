@@ -1,9 +1,10 @@
 import posts from "@/content/posts.json";
 import { cases, email, jobs, links, offers, projects } from "@/content/site";
+import { siteUrl } from "@/lib/site-url";
 
 export const dynamic = "force-static";
 
-const site = "https://lavishgoyal.vercel.app";
+const site = siteUrl;
 
 export function GET() {
   const md = [
