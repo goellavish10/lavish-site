@@ -353,11 +353,11 @@ export function SystemMap() {
         <button type="button" className="button" onClick={flood}>
           Send {FLOOD} requests at once
         </button>
-        <p className="map-tally">
-          {touched
-            ? `${s.served} served, ${s.timedOut} timed out. Three slots, one request each every ${GAP_MS / 1000} s.`
-            : "Each dot is a request."}
-        </p>
+        {touched && (
+          <p className="map-tally">
+            {s.served} served, {s.timedOut} timed out. Three slots, one request each every {GAP_MS / 1000} s.
+          </p>
+        )}
       </div>
     </div>
   );
